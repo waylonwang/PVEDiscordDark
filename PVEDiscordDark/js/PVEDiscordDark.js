@@ -3,7 +3,7 @@ const COLOR_DARKER = '#23272a'
 const COLOR_BLURPLE = '#526DD1'
 const COLOR_YELLOW = '#faa61a'
 const COLOR_RED = '#ba2b2d'
-const COLOR_ORANGE = '#f66800'
+const COLOR_WHITE = '#ffffff'
 
 
 const swapLogo = async function() {
@@ -31,7 +31,7 @@ const patchCharts = function() {
 	Ext.chart.theme.Base.prototype.config.chart.defaults.background = COLOR_DARKER;
 	Ext.chart.theme.Base.prototype.config.axis.defaults.label.color = 'white';
 	Ext.chart.theme.Base.prototype.config.axis.defaults.title.color = 'white';
-	Ext.chart.theme.Base.prototype.config.axis.defaults.style.strokeStyle = COLOR_ORANGE;
+	Ext.chart.theme.Base.prototype.config.axis.defaults.style.strokeStyle = COLOR_WHITE;
 	Ext.chart.theme.Base.prototype.config.axis.defaults.grid.strokeStyle = 'rgba(44, 47, 51, 1)'; // COLOR_DARK
 	Ext.chart.theme.Base.prototype.config.sprites.text.color = 'white';
 	Proxmox.widget.RRDChart.prototype.config.colors = ["#d6fdde", "#d6f1fd", "#fdd6d6", "#fdefd6", "#fdfdd6", "#fdd6ed", "#d6fdf9", "#7c7474", "#a66111"];
@@ -42,7 +42,7 @@ function patchGaugeWidget() {
 	Proxmox.panel.GaugeWidget.prototype.backgroundColor = COLOR_DARK;
 	Proxmox.panel.GaugeWidget.prototype.criticalColor = COLOR_RED;
 	Proxmox.panel.GaugeWidget.prototype.warningColor = COLOR_YELLOW;
-	Proxmox.panel.GaugeWidget.prototype.defaultColor = COLOR_ORANGE;
+	Proxmox.panel.GaugeWidget.prototype.defaultColor = COLOR_WHITE;
 	Proxmox.panel.GaugeWidget.prototype.items[1].series[0].colors[0] = COLOR_DARK;
 };
 
